@@ -16,6 +16,7 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
 }
 
 .cabecalho {
@@ -23,11 +24,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    width: 100%;
 }
 
 .menu ul {
     display: flex;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .menu li {
@@ -87,11 +91,12 @@ section p {
     margin-bottom: 15px;
 }
 
-#sobre{
+#sobre {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .fotoETexto {
@@ -99,13 +104,16 @@ section p {
     align-items: center;
     justify-content: center;
     gap: 10px; 
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .fotoETexto img {
-    width: 350px; 
+    max-width: 100%;  /* Ajusta a imagem para a largura máxima do contêiner */
     height: auto;
     border-radius: 25%; 
     margin-right: 10px; 
+    max-width: 350px; /* Limita a largura da imagem */
 }
 
 .text {
@@ -113,7 +121,8 @@ section p {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 30%;
+    width: 100%;
+    max-width: 600px; /* Limita a largura do texto */
 }
 
 .text h1 {
@@ -141,6 +150,24 @@ section p {
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto img {
+    max-width: 100%;  /* Ajusta a imagem do projeto para a largura do contêiner */
+    height: auto;
+    border-radius: 8px;
+}
+
+.projeto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .links {
@@ -156,6 +183,7 @@ section p {
     justify-content: center;
     gap: 50px; 
     align-items: center; 
+    flex-wrap: wrap;
 }
 
 .links2 img {
@@ -168,62 +196,53 @@ section p {
     font-weight: normal; 
 }
 
-.imgProjeto{
+.imgProjeto {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.imgProjeto p{
+.imgProjeto p {
     font-size: 1.8rem;
     color: #555;
     text-align: justify;
     max-width: 500px;
 }
 
-.projeto h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.projeto img{
-    max-width: 500px;
-    height: auto;
-}
-
-.insta, .github{
+.insta, .github {
     display: flex;
 }
 
-.icons{
+.icons {
     display: flex;
     justify-content: space-evenly;
     max-width: 100%;
 }
 
-.icons img{
+.icons img {
     width: 100%;
     max-width: 150px;
     height: auto;
 }
 
-#textoProjeto1{
+#textoProjeto1 {
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-#textoProjeto1 a{
+#textoProjeto1 a {
     font-weight: normal; 
     color: #555;
     text-decoration: none;
     font-weight: bold;
 }
 
-.linkProjeto1{
+.linkProjeto1 {
     margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 body.dark-theme {
@@ -303,6 +322,122 @@ body.dark-theme .linkProjeto1 a:hover {
     color: #3399ff; 
 }
 
-body.dark-theme .linkProjeto1{
+body.dark-theme .linkProjeto1 {
     color: #3399ff; 
+}
+
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .portifolio h1 {
+        font-size: 2rem;
+    }
+
+    .fotoETexto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fotoETexto img {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .text {
+        width: 80%;
+        max-width: 100%;
+    }
+
+    .projeto {
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    .projeto img {
+        max-width: 100%;
+    }
+
+    .linkProjeto1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links2 {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .insta, .github {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .insta img, .github img {
+        width: 50px; 
+        height: auto;
+    }
+
+    .icons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .icons img {
+        width: 50px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        width: 90%;
+    }
+
+    .projeto h3 {
+        font-size: 1.5rem;
+    }
+
+    .imgProjeto p {
+        font-size: 1.5rem;
+    }
+
+    .blackOrWithe button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .icons img {
+        width: 40px; 
+        height: auto;
+    }
+
+    .insta img, .github img {
+        width: 40px; 
+        height: auto;
+    }
+
+    .fotoETexto img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .links2{
+        width: 10%; 
+    }
 }
