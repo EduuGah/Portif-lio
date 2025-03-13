@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.portifolio {
+    margin-top: 20px;
+}
+
+.portifolio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.portifolio p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.blackOrWithe button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.blackOrWithe button:hover {
+    background-color: #444;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotoETexto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.fotoETexto img {
+    width: 350px; 
+    height: auto;
+    border-radius: 25%; 
+    margin-right: 10px; 
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+}
+
+.text h1 {
+    font-size: 2.5em;
+    text-align: left; 
+    margin-bottom: 5px; 
+}
+
+.text p {
+    font-size: 1.7rem;
+    max-width: 90%; 
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.fotoETexto a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projeto {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.links2 {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+    align-items: center; 
+}
+
+.links2 img {
+    width: 30px; 
+    height: auto;
+    border-radius: 25%; 
+}
+
+.links2 a {
+    font-weight: normal; 
+}
+
+.imgProjeto{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imgProjeto p{
+    font-size: 1.8rem;
+    color: #555;
+    text-align: justify;
+    max-width: 500px;
+}
+
+.projeto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.projeto img{
+    max-width: 500px;
+    height: auto;
+}
+
+.insta, .github{
+    display: flex;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+}
+
+.icons img{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+#textoProjeto1{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#textoProjeto1 a{
+    font-weight: normal; 
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linkProjeto1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body.dark-theme {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark-theme header {
+    background-color: #444;
+}
+
+body.dark-theme .menu a {
+    color: #fff;
+}
+
+body.dark-theme p {
+    color: #fff;
+}
+
+body.dark-theme a {
+    color: #fff;
+}
+
+body.dark-theme .blackOrWithe button {
+    background-color: #777;
+}
+
+body.dark-theme .blackOrWithe button:hover {
+    background-color: #666;
+}
+
+body.dark-theme .projeto {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme footer {
+    background-color: #444;
+}
+
+body, .blackOrWithe button, .projeto {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: #007bff; 
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+body.dark-theme a {
+    color: #66b3ff; 
+}
+
+body.dark-theme a:hover {
+    color: #3399ff; 
+}
+
+body.dark-theme .projeto a {
+    color: #66b3ff;
+}
+
+body.dark-theme .projeto a:hover {
+    color: #3399ff; 
+}
+
+body.dark-theme .linkProjeto1 a {
+    color: #66b3ff; 
+}
+
+body.dark-theme .linkProjeto1 a:hover {
+    color: #3399ff; 
+}
+
+body.dark-theme .linkProjeto1{
+    color: #3399ff; 
+}
